@@ -1,0 +1,243 @@
+/* Reset */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+body{
+    position: relative;
+    background-color: #0B192C;
+}
+.container{
+    height:100vh ;
+    width: 100%;
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow-y: hidden;
+}
+.theater {
+    margin: 1.8vw 1vw;
+    height: 78vh;
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    padding: 1vw;
+    /* background-color: #003161; */
+    gap: 1vw;
+    border-radius: 20px;
+}
+
+.seats {
+    
+    /* background: lightblue; */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* border: 1px solid black; */
+}
+
+.screen {
+    grid-column: 1/4;
+    margin-bottom: 3vw;
+    /* border-bottom: 1px solid white;
+    clip-path: polygon(70.71% 70.71%, 100% 100%, 100% 45.25%, 70.71% 0%, 29.29% 0%, 0% 45.25%, 0% 100%, 29.29% 70.71%);  */
+}
+
+/* Curved Screen */
+.main-screen {
+    width: 90vw;
+    height: 3vw;
+    background-color: black;
+    border-radius: 10px;
+    border-bottom: 2px solid white;
+    box-shadow: 0px 15px 10px 1px rgba(240, 240, 241, 0.3);
+}
+
+
+
+/* Seat Container */
+.front-left, .front-right, .back-right, .back-left {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 4 seats per row */
+    gap: 1vw;
+    padding: 2vw;
+    justify-content: center;
+}
+.front-center, .back-center{
+    display: grid;
+    grid-template-columns: repeat(6, 1fr); /* 4 seats per row */
+    gap: 1vw;
+    padding: 1vw;
+    justify-content: center;
+}
+
+/* Individual Seat */
+.frontLeftSeat, .frontRightSeat , .backRightSeat , .backLeftSeat, .backCenterSeat, .frontCenterSeat{
+    width: 3vw;
+    min-height:3vw;
+    background-color: #444; /* Dark seat color */
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px 20px 0 0;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+
+.select-menu{
+    width: 90%;
+    max-height: 6vh;
+    /* background-color: blue; */
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border-radius: 20px;
+    margin: 0 1vw;
+}
+.option{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 900;
+    color: #bbb;
+}
+.box{
+    width: 20px;
+    height: 20px;
+    margin: 10px;
+    border-radius: 10px 10px 0 0;
+}
+.selected-box{
+    background-color: #626F47;
+}
+.available-box{
+    background-color: #444;
+}
+.booked-box{
+    background-color:  #123524;
+}
+
+.Buttons{
+    margin-top: 10px;
+    width: 90%;
+    height: 10vh;
+    border-radius: 20px;
+    /* background-color: burlywood; */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #bbb;
+    /* padding: 0 10vw; */
+    margin: 0 1vw;
+}
+.back-button, .next-button{
+    font-size: clamp(20px, 40px, 50px);
+    cursor: pointer;
+}
+.Price{
+    font-size: 3vw;
+}
+
+
+
+/* Centering the form */
+.customer-detail {
+    display: none;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, 20%);
+}
+
+/* Form Container */
+.detail-container {
+    width: 400px;
+    background-color: #222;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    color: white;
+}
+
+/* Header */
+.nav-menu h1 {
+    font-size: 22px;
+    margin-bottom: 15px;
+    color: #ffcc00;
+}
+
+/* Input Group */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+    margin-bottom: 15px;
+}
+
+.input-group label {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+.input-group input {
+    padding: 10px;
+    border: 1px solid #666;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: #333;
+    color: white;
+    outline: none;
+}
+
+.input-group input::placeholder {
+    color: #bbb;
+}
+
+/* Button Group */
+.button-group {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+/* Confirm Button */
+.confirm-btn {
+    background: #ffcc00;
+    color: #222;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.confirm-btn:hover {
+    background: #e6b800;
+    transform: scale(1.05);
+}
+
+/* Cancel Button */
+.cancel-btn {
+    background: #d9534f;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.cancel-btn:hover {
+    background: #c9302c;
+    transform: scale(1.05);
+}

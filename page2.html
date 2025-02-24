@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Theater Seat Layout</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+    integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+  <link rel="stylesheet" href="style2.css">
+</head>
+
+<body>
+  <section class="container">
+    <div class="Buttons">
+      <div class="back-button"><a href="index.html"><i class="fa-solid fa-arrow-left"></i></a></div>
+      <div class="Price"></div>
+      <div class="next-button"><i class="fa-solid fa-arrow-right"></i></div>
+    </div>
+    <div class="select-menu">
+      <div class="Selected option">
+        <div class="selected-box box"></div>
+        <p>Selected</p>
+      </div>
+      <div class="available option">
+        <div class="available-box box"></div>
+        <p>Available</p>
+      </div>
+      <div class="booked option">
+        <div class="booked-box box"></div>
+        <p>Booked</p>
+      </div>
+    </div>
+    <div class="theater">
+      <div class="seats screen">
+        <div class="main-screen"></div>
+      </div>
+      <div class="seats front-left"> </div>
+      <div class="seats front-center"></div>
+      <div class="seats front-right"></div>
+      <div class="seats back-left"></div>
+      <div class="seats back-center"></div>
+      <div class="seats back-right"></div>
+    </div>
+  </section>
+
+  
+  <section class="customer-detail">
+    <div class="detail-container">
+        <div class="nav-menu">
+            <h1>Book Your Ticket</h1>
+        </div>
+        <div class="detail">
+            <div class="input-group">
+                <label for="name">Enter Your Name:</label>
+                <input type="text" id="name" placeholder="John Doe">
+            </div>
+            <div class="input-group">
+                <label for="age">Enter Your Age:</label>
+                <input type="number" id="age" placeholder="25">
+            </div>
+            <div class="input-group">
+                <label for="email">Enter Your Email:</label>
+                <input type="email" id="email" placeholder="john@example.com">
+            </div>
+            <div class="button-group">
+                <button class="confirm-btn">Confirm</button>
+                <button class="cancel-btn">Cancel</button>
+            </div>
+        </div>
+    </div>
+</section>
+
+  <script src="app2.js"></script>
+</body>
+
+</html>
